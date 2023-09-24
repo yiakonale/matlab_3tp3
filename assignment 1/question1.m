@@ -17,4 +17,6 @@ stem(n, ex, "LineWidth", 3);
 %xlim([0 10]);
 %ylim([-0.4 0.8]);
 
-exportgraphics(gcf, 'filename_you_want.jpg');
+%text(-5, 1, "John Smith 5551212" , "FontSize", 14);
+
+%exportgraphics(gcf, 'filename_you_want.jpg');
