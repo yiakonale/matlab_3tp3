@@ -12,5 +12,10 @@ rec_g = g*g_scale;
 
 reconstructed_image = cat(3, rec_r, rec_g, b);
 
+tiledlayout(2,1);
+nexttile;
+imshow(img);
+nexttile;
 imshow(reconstructed_image);
-imwrite(reconstructed_image, "my_fixed_image.jpg");
+
+%imwrite(reconstructed_image, "my_fixed_image.jpg");

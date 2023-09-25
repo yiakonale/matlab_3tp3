@@ -2,7 +2,8 @@ opts = detectImportOptions('course_grades_2023.xlsx');
 opts = setvartype(opts, {'ID_Number', 'Name'}, 'string');
 table = readtable('course_grades_2023.xlsx', opts);
 
-disp("3TP3 Question 2")
+disp("3TP3 Question 2");
+disp("-");
 labMark(table);
 examMark(table);
 finalMark(table);
@@ -16,9 +17,7 @@ table
 
 %%a
 function [maxName, maxGrade] = labMark(table)
-    newTable = table(2:end,:);
-    %newTable(1,:) = [];
-    %disp(newTable);
+    newTable = table(2:end, :);
     gradeSum = newTable.Lab_1 + newTable.Lab_2 + newTable.Lab_3 + newTable.Lab_4;
     maxGrade = max(gradeSum);
     maxIndex = gradeSum == maxGrade;
@@ -31,9 +30,7 @@ end
 
 %%b
 function [maxName, maxGrade] = examMark(table)
-    newTable = table(2:end,:);
-    %newTable(1,:) = [];    
-    %disp(newTable);
+    newTable = table(2:end, :);
     gradeSum = newTable.Exam_1 + newTable.Exam_2 + newTable.Exam_3 + newTable.Exam_4;
     maxGrade = max(gradeSum);
     maxIndex = gradeSum == maxGrade;
@@ -46,8 +43,7 @@ end
 
 %%c
 function [maxName, maxGrade] = finalMark(table)
-    newTable = table(2:end,:);
-    %newTable(1,:) = []; 
+    newTable = table(2:end, :);
     gradeSum = newTable.Lab_1 + newTable.Lab_2 + newTable.Lab_3 + newTable.Lab_4 + ...
         newTable.Midterm + newTable.Exam_1 + newTable.Exam_2 + newTable.Exam_3 + newTable.Exam_4;
     maxGrade = max(gradeSum);
