@@ -1,3 +1,5 @@
+clear;
+
 [signal, Fs] = audioread('my_speech_clip.wav');
 
 L = length(signal); % Number of samples in the signal.

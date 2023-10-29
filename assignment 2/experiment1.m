@@ -1,3 +1,5 @@
+clear;
+
 xn_a = [0 0 1 1 1 0 0];
 vn_a = [0 0 1 1 1 1 0 0];
 conv_a = conv(xn_a,vn_a);
