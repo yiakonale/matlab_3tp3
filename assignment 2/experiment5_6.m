@@ -12,7 +12,8 @@ alpha = 1.0;    %echo scale factor
 
 
 sampleDelay = round(Te/(1000*T));           %timestep delay equivalent to Te
-IR = [1; zeros(sampleDelay-1,1); alpha];    %impulse response
+echo = [zeros(sampleDelay-1,1); alpha];     %impulse response for echo
+IR = [1; echo];                             %impulse response for echo + signal
 
 signalplusecho_conv = conv(signal, IR);                                    %produce echo through convolution
 signalplusecho_conv = signalplusecho_conv/max(abs(signalplusecho_conv));   %rescale signal
