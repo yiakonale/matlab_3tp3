@@ -27,4 +27,4 @@ plot(nsound(1:nfinalplot), cnT(1:nfinalplot), 'LineWidth',1);
 % audiowrite('soundfile.wav', cnT, fs);
 %
 % Uncomment/edit this next line to save the graph.
-% exportgraphics(gcf, ’filename_you_want.jpg’);
+% exportgraphics(gcf, 'filename_you_want.jpg');
