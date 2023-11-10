@@ -1,4 +1,4 @@
-clear;
+% clear;
 
 xn_a = [0 0 1 1 1 0 0];
 vn_a = [0 0 1 1 1 1 0 0];
@@ -14,8 +14,9 @@ conv_c = conv(xn_c,vn_c);
 
 n_x = -2:4;
 n_v = -2:5;
-n_c = -2:11;
+n_c = -4:9;
 
+figure(Name=myTitle);
 %a
 subplot(3,3,1);
 stem(n_x, xn_a)
